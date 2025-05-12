@@ -1,0 +1,21 @@
+name = "strava-heatmap-proxy2"
+type = "webpack"
+
+# Change this to your own account ID
+account_id = "17d079c2a1e736bdfc36c112db59fde9"
+
+workers_dev = true
+route = ""
+zone_id = ""
+
+compatibility_date = "2021-11-19"
+
+# Controls how long Cloudflare should cache each tile before requesting again
+# from Strava.
+#
+# Use "0" to disable caching.
+vars = { TILE_CACHE_SECS = "86400" }
+
+# [secrets]
+# STRAVA_ID
+# STRAVA_COOKIES

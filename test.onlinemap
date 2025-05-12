@@ -1,0 +1,42 @@
+{
+	"version": 3,
+	"folders":[
+		{
+			"name": {
+				"default": "NaKarte Strava Heatmap"
+			},
+			"description": {
+				"default": ""
+			},
+			"folder_key":"",
+			"key":"me.nakarte.strava"
+		}
+	],
+	"maps": [
+		{
+			"name": {
+				"default": "NaKarte Strava Heatmap"
+			},
+			"description": {
+				"default": ""
+			},
+			"type": "onlinemap",
+			"url": "https://proxy.nakarte.me/https/heatmap-external-b.strava.com/tiles-auth/ride/red/{z}/{x}/{y}.png?px=256",
+			"attribution": "Â© Strava.com",
+			"defaultLatitude": 51.47,
+			"defaultLongitude": 0,
+			"defaultZoom": 1,
+			"minZoom": 0,
+			"maxZoom": 22,
+			"projection": "EPSG_4326",
+			"headers": [
+				{
+					"key": "User-Agent",
+					"value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
+				}
+			],
+			"unique_id": "me.nakarte.strava.heatmap",
+			"folder_key":"me.nakarte.strava"
+		}
+	]
+}

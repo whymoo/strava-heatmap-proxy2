@@ -1,0 +1,67 @@
+{
+	"version": 3,
+	"folders":[
+		{
+			"name": {
+				"default": "Bing online maps"
+			},
+			"description": {
+				"default": ""
+			},
+			"folder_key":"",
+			"key":"com.microsoft.bing.onlinemaps"
+		}
+	],
+	"maps": [
+		{
+			"name": {
+				"default": "Bing raster roadmap"
+			},
+			"description": {
+				"default": ""
+			},
+			"type": "onlinemap",
+			"url": "http://ecn.t3.tiles.virtualearth.net/tiles/r{quadkey}.png?g=1&mkt=en-US&shading=hill&n=z",
+			"attribution": "© Bing.com",
+			"defaultLatitude": 51.47,
+			"defaultLongitude": 0,
+			"defaultZoom": 1,
+			"minZoom": 0,
+			"maxZoom": 22,
+			"projection": "EPSG_4326",
+			"headers": [
+				{
+					"key": "User-Agent",
+					"value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
+				}
+			],
+			"unique_id": "com.microsoft.bing.r",
+			"folder_key":"com.microsoft.bing.onlinemaps"
+		},
+		{
+			"name": {
+				"default": "Bing raster satellite"
+			},
+			"description": {
+				"default": ""
+			},
+			"type": "onlinemap",
+			"url": "http://ecn.t3.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=1&mkt=en-US",
+			"attribution": "© Bing.com",
+			"defaultLatitude": 51.47,
+			"defaultLongitude": 0,
+			"defaultZoom": 1,
+			"minZoom": 0,
+			"maxZoom": 22,
+			"projection": "EPSG_4326",
+			"headers": [
+				{
+					"key": "User-Agent",
+					"value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
+				}
+			],
+			"unique_id": "com.microsoft.bing.a",
+			"folder_key":"com.microsoft.bing.onlinemaps"
+		}
+	]
+}
