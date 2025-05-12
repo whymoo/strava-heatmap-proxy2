@@ -1,0 +1,29 @@
+name: mettre-a-jour-cookies-strava
+
+on:
+  workflow_dispatch:
+    inputs:
+      cookies:
+        required: true
+        type: string
+  
+jobs:
+  update_cloudflare_secret:
+    runs-on: ubuntu-latest
+    name: Update Cloudflare Cookies
+    steps:
+      - uses: actions/checkout@v2
+      - uses: denolib/setup-deno@v2
+        with:
+          deno-version: v1.x
+      - name: update credentials
+        run: |
+          echo "Valeur des cookies reçue: ${{ github.event.inputs.cookies }}"
+          echo "::add-mask::${{ github.event.inputs.cookies }}" 
+          echo "STRAVA_COOKIES=${{ github.event.inputs.cookies }}" >> $GITHUB_ENV
+      - name: Write Strava creds to Cloudflare
+        uses: cloudflare/wrangler-action@1.2.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          secrets: |
+            STRAVA_COOKIES
